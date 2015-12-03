@@ -1,23 +1,94 @@
----
-layout: default
----
+<html lang="en">
+  <head>
 
-<div class="home">
+    <title>Supplementary</title>
 
-  <h1 class="page-heading">Posts</h1>
+    <!-- Bootstrap core CSS -->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <!-- Custom styles for this template -->
+    <link href="styles/album.css" rel="stylesheet">
+  </head>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <body>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <section class="jumbotron">
+      <div class="container text-center">
+        <h1 class="jumbotron-heading text-center">
+	  Principled Parallel Mean-Field Inference for Discrete Random Fields
+	</h1>
 
-</div>
+        <p class="jumbotron-heading text-center">
+	  Pierre Baque*, Timur Bagautdinov*, Francois Fleuret, Pascal Fua
+	</p>
+
+        <p class=".small">
+	  * authors contributed equally
+	</p>
+	
+
+        <p class="jumbotron-heading text-center">
+	  EPFL, IDIAP
+	</p>
+	
+
+	<h5 class="jumbotron-heading">Abstract</h5>
+	<p class="text-muted"> Mean-field variational inference is one of the most popular approaches to
+	  inference in discrete random fields. Standard mean-field optimization is based
+	  on coordinate descent and in many situations can be impractical. Thus, in
+	  practice, various parallel techniques are used, which either rely on ad
+	  hoc smoothing with heuristically set parameters, or put strong constraints on
+	  the type of models. In this paper, we propose a novel proximal gradient-based
+	  approach to optimizing the variational objective. It is naturally
+	  parallelizable and easy to implement.
+
+	  We prove its convergence, and then
+	  demonstrate that, in practice, it yields faster convergence and often finds
+	  better optima than more traditional mean-field optimization techniques.
+	  Moreover, our method is less sensitive to the choice of parameters.
+	</p>
+
+
+        <h5 class="jumbotron-heading">Files</h5>
+    	<p class="text-muted">
+	  <a href="http://arxiv.org/abs/1511.06103">Preprint</a>,
+	  <a href="derivations.pdf">additional proofs</a>
+	</p>
+
+        <h5 class="jumbotron-heading">Code</h5>
+    	<p class="text-muted">
+	  ... to be released ...
+	</p> 
+
+
+    	<h5 class="jumbotron-heading">Sample Results</h5>
+    	<p class="text-muted">We provide additional sample results for three datasets considered in the paper </p>
+
+        <div class="row text-center">
+          <div class="card">
+            <a href="samples_dtf.pdf">
+    	      <img src="images/dtf_original_20.png" alt="Characters Inpainting" width=128 height=160></a>
+            <p class="text-muted">Characters Inpainting</p>
+          </div>
+          <div class="card">
+    	    <a href="samples_voc.pdf">
+              <img src="images/2007_004189_gt.png" width=256 height=160 alt="Semantic Segmentation">
+    	    </a>
+            <p class="text-muted">Semantic Segmentation</p>
+          </div>
+          <div class="card">
+    	    <a href="https://www.youtube.com/watch?v=LW1EDjrVTnw">
+              <img src="images/source_c0_f3.png" alt="People Detection" width=256 height=160>
+    	    </a>
+            <p class="text-muted">People Detection</p>
+
+          </div>
+
+        </div>
+	
+	 
+      </div>
+    </section>
+
+  </body>
+</html>
